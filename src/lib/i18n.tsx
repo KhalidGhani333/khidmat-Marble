@@ -550,7 +550,7 @@ const dict: Record<string, { en: string; ar: string }> = {
 const Ctx = createContext<AppCtx | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+  const [lang, setLangState] = useState<Lang>("ar");
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
