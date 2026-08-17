@@ -46,6 +46,19 @@ export const Route = createLazyFileRoute("/")({
 function HomePage() {
   const { t, lang } = useApp();
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, email, subject, message } = formData;
+    const whatsappMessage = `New Inquiry:\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    window.open(`${CONTACT.whatsapp.split('?')[0]}?text=${encodedMessage}`, "_blank");
+  };
 
   const services = [
     { id: "01", img: s01, title: t("service.tile.title"), desc: t("service.tile.desc") },
@@ -344,25 +357,25 @@ function HomePage() {
 
           <Reveal delay={0.1}>
             <div className="rounded-3xl border border-border bg-card p-6 md:p-10 shadow-2xl shadow-black/5">
-              <form className="grid gap-5 md:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
+              <form className="grid gap-5 md:grid-cols-2" onSubmit={handleSubmit}>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">{t("contact.form.name")}</label>
-                  <Input placeholder={t("contact.form.name.ph")} />
+                  <Input name="name" value={formData.name} onChange={handleInputChange} placeholder={t("contact.form.name.ph")} required />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">{t("contact.form.email")}</label>
-                  <Input type="email" placeholder={t("contact.form.email.ph")} />
+                  <Input name="email" type="email" value={formData.email} onChange={handleInputChange} placeholder={t("contact.form.email.ph")} required />
                 </div>
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium">{t("contact.form.subject")}</label>
-                  <Input placeholder="Marble polishing inquiry..." />
+                  <Input name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Marble polishing inquiry..." />
                 </div>
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium">{t("contact.form.message")}</label>
-                  <Textarea placeholder={t("contact.form.message.ph")} className="min-h-[120px]" />
+                  <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder={t("contact.form.message.ph")} className="min-h-[120px]" required />
                 </div>
                 <div className="md:col-span-2">
-                  <Button size="lg" className="w-full bg-gold hover:bg-gold/90 text-gold-foreground font-bold h-11">
+                  <Button type="submit" size="lg" className="w-full bg-gold hover:bg-gold/90 text-gold-foreground font-bold h-11">
                     {t("contact.form.submit")}
                   </Button>
                 </div>

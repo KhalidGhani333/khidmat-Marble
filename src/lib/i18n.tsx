@@ -22,7 +22,7 @@ const dict: Record<string, { en: string; ar: string }> = {
   "nav.ceramicPorcelain": { en: "Ceramic & Porcelain", ar: "سيراميك وبورسلان" },
   "nav.projects": { en: "Projects", ar: "معرض المشاريع" },
   "nav.cta": { en: "Contact", ar: "تواصل" },
-  "site.name": { en: "KHIDMAT", ar: "خدمات" },
+  "site.name": { en: "Tile and Marble polishing", ar: "جلي بلاط تلميع" },
   tagline: { en: "Marble & Tile Care", ar: "العناية بالرخام والسيراميك" },
 
   "hero.badge": {
@@ -40,6 +40,7 @@ const dict: Record<string, { en: string; ar: string }> = {
   "cta.whatsapp": { en: "Get Free Quote on WhatsApp", ar: "احصل على عرض مجاني عبر واتساب" },
   "cta.call": { en: "Call Now +966 53 650 8959", ar: "اتصل الآن ‎+966 53 650 8959" },
   "cta.whatsappShort": { en: "WhatsApp Us Now", ar: "راسلنا عبر واتساب" },
+  "cta.callShort": { en: "Call Us Now", ar: "اتصل بنا الآن" },
   "cta.bookService": { en: "Book Service", ar: "احجز الخدمة" },
 
   "stats.years": { en: "Years of Experience", ar: "سنوات من الخبرة" },

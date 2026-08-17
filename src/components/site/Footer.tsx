@@ -62,6 +62,20 @@ export function Footer() {
   );
 }
 
+export function CallFloat() {
+  const { t } = useApp();
+  return (
+    <a
+      href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
+      aria-label="Call"
+      className="fixed bottom-24 right-6 z-40 flex h-14 items-center gap-2 rounded-full bg-gold px-6 text-gold-foreground shadow-xl animate-pulse-gold transition hover:scale-105"
+    >
+      <span className="text-sm font-semibold whitespace-nowrap">{t("cta.callShort")}</span>
+      <Phone className="h-6 w-6 shrink-0" />
+    </a>
+  );
+}
+
 export function WhatsAppFloat() {
   return (
     <a
@@ -69,7 +83,7 @@ export function WhatsAppFloat() {
       target="_blank"
       rel="noreferrer"
       aria-label="WhatsApp"
-      className="fixed bottom-6 right-6 z-40 flex h-14 items-center gap-2 rounded-full bg-[#25D366] px-4 text-white shadow-xl animate-pulse-gold transition hover:scale-105"
+      className="fixed bottom-6 right-6 z-40 flex h-14 items-center gap-2 rounded-full bg-[#25D366] px-6 text-white shadow-xl animate-pulse-gold transition hover:scale-105"
     >
       <span className="text-sm font-semibold whitespace-nowrap">WhatsApp</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-6 w-6 shrink-0 fill-white">

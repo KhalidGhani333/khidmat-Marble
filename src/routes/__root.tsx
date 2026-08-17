@@ -14,7 +14,7 @@ import newLogoUrl from "../assets/newlogo-removebg.png?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AppProvider } from "@/lib/i18n";
 import { Navbar } from "@/components/site/Navbar";
-import { Footer, WhatsAppFloat } from "@/components/site/Footer";
+import { Footer, WhatsAppFloat, CallFloat } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
@@ -108,6 +108,7 @@ function RootComponent() {
         </main>
         <Footer />
         <WhatsAppFloat />
+        <CallFloat />
         <Toaster richColors position="top-center" />
       </AppProvider>
     </QueryClientProvider>
