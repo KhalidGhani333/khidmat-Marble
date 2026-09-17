@@ -73,6 +73,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Khidmat Marble & Tile Care" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        "script:ld+json": {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Khidmat Marble & Tile Care",
+          url: "https://www.khidmatmarble.com",
+          telephone: "+966536508959",
+          description: "Professional marble, tile and granite polishing services in Riyadh. Premium Italian equipment, 10+ years of experience.",
+          areaServed: "Riyadh, Saudi Arabia",
+          sameAs: [
+            "https://www.facebook.com/share/1EFU3Md8QZ/",
+            "https://www.instagram.com/arshad62857?utm_source=qr&igsh=ZGZ4NjRkYTBiZXZq",
+            "https://www.tiktok.com/@user651311276?_r=1&_t=ZS-97BD0F4Sv0Z",
+          ],
+        },
+      },
     ],
     links: [
       { rel: "icon", href: newLogoUrl },

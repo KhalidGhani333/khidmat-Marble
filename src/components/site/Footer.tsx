@@ -39,6 +39,7 @@ export function Footer() {
             <li><Link to="/ceramic-porcelain" className="hover:text-gold">{t("nav.ceramicPorcelain")}</Link></li>
             <li><Link to="/project-exhibition" className="hover:text-gold">{t("nav.projects")}</Link></li>
             <li><Link to="/about-us" className="hover:text-gold">{t("nav.about")}</Link></li>
+            <li><Link to="/guides" className="hover:text-gold">{t("nav.guides")}</Link></li>
             <li><Link to="/contact" className="hover:text-gold">{t("nav.contact")}</Link></li>
           </ul>
         </div>
