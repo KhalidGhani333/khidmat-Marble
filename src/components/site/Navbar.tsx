@@ -46,6 +46,7 @@ export function Navbar() {
           />
           <div className="leading-tight">
             <div
+              translate="no"
               className={cn(
                 "font-display font-black text-xl tracking-tight",
                 scrolled ? "text-foreground" : "text-white",
@@ -54,6 +55,7 @@ export function Navbar() {
               {t("site.name")}
             </div>
             <div
+              translate="no"
               className={cn(
                 "text-[10px] uppercase tracking-[0.2em]",
                 scrolled ? "text-muted-foreground" : "text-white/70",

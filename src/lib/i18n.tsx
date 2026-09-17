@@ -22,8 +22,8 @@ const dict: Record<string, { en: string; ar: string }> = {
   "nav.ceramicPorcelain": { en: "Ceramic & Porcelain", ar: "سيراميك وبورسلان" },
   "nav.projects": { en: "Projects", ar: "معرض المشاريع" },
   "nav.cta": { en: "Contact", ar: "تواصل" },
-  "site.name": { en: "Tile and Marble polishing", ar: "جلي بلاط تلميع" },
-  tagline: { en: "Marble & Tile Care", ar: "العناية بالرخام والسيراميك" },
+  "site.name": { en: "Khidmat Marble", ar: "خدمة الرخام" },
+  tagline: { en: "Tile and Marble polishing", ar: "تلميع البلاط والرخام" },
 
   "hero.badge": {
     en: "✦ Riyadh's #1 Marble & Tile Polishing Specialists",
