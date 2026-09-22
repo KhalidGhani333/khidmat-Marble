@@ -601,6 +601,6 @@ export const CONTACT = {
   phone: "+966 53 650 8959",
   whatsapp: "https://wa.me/966536508959",
   whatsappDisplay: "+966 53 650 8959",
-  email: "barvez0578404211@gmail.com",
+  email: "khidmatmarble.riyadh@gmail.com",
   location: "Riyadh, Saudi Arabia",
 };
